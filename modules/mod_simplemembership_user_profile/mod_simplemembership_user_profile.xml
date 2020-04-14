@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+  <name>Simple Membership User's Profile</name>
+  <authorUrl>http://www.ordasoft.com</authorUrl>
+  <creationDate>January 2020</creationDate>
+  <copyright> @copyright Andrey Kvasnevskiy-OrdaSoft(akbet@mail.ru); All rights reserved. </copyright>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <author>Andrey Kvasnevskiy</author>
+  <authorEmail>support@ordasoft.com</authorEmail>
+  <version>6.5.3 FREE</version>
+  <description>Simple Membership User's Profile - Displays User's profile, who is onwner in VechicleManager, RealestateManager, Booklibrary, Medialibrary, Advertisement board
+  </description>
+  <files>
+    <filename module="mod_simplemembership_user_profile">mod_simplemembership_user_profile.php</filename>
+    <filename >index.html</filename>
+    <folder>tmpl</folder>
+  </files>
+
+  
+  <!--JOOMLA 2.5.3--> 
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        
+        <field name="rem" type="radio" default="1" label="Show user's profile in Realestate Manager" description="Show/Hide user's profile when show his realestate">
+          <option value="0">Hide</option>
+          <option value="1">Show</option>
+        </field>
+        
+        <field name="vm" type="radio" default="1" label="Show user's profile in Vehicle Manager " description="Show/Hide user's profile when show his vehicles">
+          <option value="0">Hide</option>
+          <option value="1">Show</option>
+        </field>
+        <field name="bl" type="radio" default="1" label="Show user's profile in Book Library" description="Show/Hide user's profile when show his books">
+          <option value="0">Hide</option>
+          <option value="1">Show</option>
+        </field>
+        <field name="ml" type="radio" default="1" label="Show user's profile in Media Library" description="Show/Hide user's profile when show his media">
+          <option value="0">Hide</option>
+          <option value="1">Show</option>
+        </field>
+        <field name="ads" type="radio" default="1" label="Show user's profile in Advertisement Board" description="Show/Hide user's profile when show his ads">
+          <option value="0">Hide</option>
+          <option value="1">Show</option>
+        </field>
+        <field name="cck" type="radio" default="1" label="Show user's profile in CCK" description="Show/Hide user's profile when show his ads">
+          <option value="0">Hide</option>
+          <option value="1">Show</option>
+        </field>
+        <field name="view" type="list" label="Show field in horisontal or vertical orientation" description="Show field in horisontal or vertical orientation">
+          <option value="0">Vertical</option>
+          <option value="1">Horisontal</option>
+        </field>
+        <field name="image_size" type="list" label="User Image size" description="Select User Image size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </field>
+
+        <field name="spacer2" type="spacer" hr="true"
+        />
+        <field name="module-require-user" type="spacer" class="text"
+              label="User profile fields for User Profile Module"
+        />
+
+        <field name="profile_address1" type="list"  default="1"
+              description="Choose an option for the field Address1"
+              label="Address 1:"
+        >
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+
+        <field name="profile_address2" type="list"  default="1"
+              description="Choose an option for the field Address2"
+              label="Address 2:"
+        >
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+
+        <field name="profile_city" type="list"  default="1"
+              description="Choose an option for the field City"
+              label="City:"
+        >
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+
+        <field name="profile_region" type="list"  default="1"
+              description="Choose an option for the field Region"
+              label="Region:"
+        >
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+
+        <field name="profile_country" type="list"  default="1"
+              description="Choose an option for the field Country"
+              label="Country:"
+        >
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+
+        <field name="profile_postal_code" type="list"  default="1"
+              description="Choose an option for the field Postal Code"
+              label="Postal / ZIP Code:"
+        >
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+
+        <field name="profile_phone" type="list"  default="1"
+              description="Choose an option for the field Phone"
+              label="Phone:"
+        >
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+
+        <field name="profile_paypal_email" type="list"  default="0"
+                description="Please insert your paypal email here!"
+                label="PayPal email:"
+        >
+                <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+
+        <field name="profile_website" type="list"  default="1"
+              description="Choose an option for the field Web Site"
+              label="Web site:"
+        >
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+        <field  name="profile_favoritebook"
+              type="list"  default="1"
+              label="Favourite Book:"
+              description="Choose an option for the field Favourite Book">
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+
+        <field
+              name="profile_aboutme" type="list"  default="1"
+              label="About Me:"
+              description="Choose an option for the field About Me.">
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+        <field
+              name="profile_tos"
+              type="list"  default="1"
+              label="Terms of Service:"
+              description="Agree to terms of service">
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+        <field
+              name="profile_tos_link"
+              type="text" label="Terms of Service Link:"
+        >
+        </field>
+        <field
+              name="profile_dob"
+              type="list"  default="1"
+              label="Date of Birth:"
+              description="Choose an option for the field Date of Birth"
+        >
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+
+        <field
+              name="profile_file"
+              type="list"  default="1"
+              description="Profile image ( it works only in SimpleMembership! )"
+              label="Profile image"
+        >
+              <option value="0">Hide</option>
+              <option value="1">Show</option>
+        </field>
+        <field name="@spacer" type="spacer" default="" label="" description="" />
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Suffix for the css class of the module, to allow individual module styling" />
+        <field name="Item_id" type="text" default="" label="ItemId Suffix"
+               description="ItemId Suffix for pages. Enter Id for Menu" /> 
+      </fieldset>
+    </fields>
+    </config>
+  </extension>
+

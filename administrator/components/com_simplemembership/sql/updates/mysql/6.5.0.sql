@@ -1,0 +1,1 @@
+ALTER TABLE `#__simplemembership_groups` ADD `description` TEXT NOT NULL AFTER `published`;
