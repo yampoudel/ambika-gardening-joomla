@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="user" method="upgrade">
+  <name>Simple membership User Profile</name>
+  <author>Anton Getman</author>
+  <creationDate>January 2020</creationDate>
+  <copyright></copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>support@ordasoft.com</authorEmail>
+  <authorUrl>www.ordasoft.com</authorUrl>
+  <version>6.5.3 FREE</version>
+  <description>Simple membership - User Profile Plugin</description>
+  <files>
+    <filename plugin="plg_simplemembership_user_profile">plg_simplemembership_user_profile.php</filename>
+    <filename>index.html</filename>
+    <filename>publish.php</filename>
+    <folder>profiles</folder>
+    <folder>images</folder>
+  </files>
+  <scriptfile>publish.php</scriptfile>
+  <languages>
+    <language tag="en-GB">en-GB.plg_user_plg_simplemembership_user_profile.ini</language>
+    <language tag="en-GB">en-GB.plg_user_plg_simplemembership_user_profile.sys.ini</language>
+    <language tag="fr-FR">fr-FR.plg_user_plg_simplemembership_user_profile.ini</language>
+    <language tag="fr-FR">fr-FR.plg_user_plg_simplemembership_user_profile.sys.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+    <fieldset name="basic">
+    <field name="register-require-user" type="spacer" class="text"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_NAME_REGISTER_REQUIRE_USER"
+    />
+
+    <field name="register-require_address1" type="list" default="1"
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS1_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS1_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="register-require_address2" type="list"  default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS2_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS2_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="register-require_city" type="list" default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_CITY_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_CITY_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="register-require_region" type="list" default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_REGION_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_REGION_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="register-require_country" type="list" default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_COUNTRY_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_COUNTRY_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="register-require_postal_code" type="list" default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_POSTAL_CODE_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_POSTAL_CODE_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="register-require_phone" type="list" default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_PHONE_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_PHONE_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="register-require_paypal_email" type="list"  default="1"
+            description="Please insert your paypal email here!"
+            label="PayPal email:"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="register-require_website" type="list" default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_WEB_SITE_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_WEB_SITE_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+    <field 	name="register-require_favoritebook" default="1"
+            type="list"
+
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FAVORITE_BOOK_LABEL"
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FAVORITE_BOOK_DESC"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field
+            name="register-require_aboutme" type="list" default="1"
+
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ABOUT_ME_LABEL"
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ABOUT_ME_DESC"
+    >
+            <option	value="2">JOPTION_REQUIRED</option>
+            <option	value="1">JOPTION_OPTIONAL</option>
+            <option	value="0">JDISABLED</option>
+    </field>
+    <field
+            name="register-require_tos"
+    type="list"  default="1"
+
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_TOS_LABEL"
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_TOS_DESC"
+    >
+            <option	value="2">JOPTION_REQUIRED</option>
+            <option	value="1">JOPTION_OPTIONAL</option>
+            <option	value="0">JDISABLED</option>
+    </field>
+    <field
+            name="register-require_tos_link"
+            type="text"
+            label="Terms of Service Link:"
+    >
+    </field>
+    <field
+            name="register-require_dob" type="list"  default="1"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_DOB_LABEL"
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_DOB_DESC">
+            <option	value="2">JOPTION_REQUIRED</option>
+            <option	value="1">JOPTION_OPTIONAL</option>
+            <option	value="0">JDISABLED</option>
+    </field>
+    <field
+            name="register-require_file"
+            type="list"  default="1"
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FILE_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FILE_LABEL"
+    >
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+
+    <field name="spacer1" type="spacer" hr="true"
+    />
+    <field name="profile-require-user" type="spacer" class="text"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_NAME_SIMPLEMEMBERSHIP_REQUIRE_USER"
+    />
+
+    <field name="profile-require_address1" type="list"  default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS1_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS1_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="profile-require_address2" type="list"  default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS2_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS2_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="profile-require_city" type="list"  default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_CITY_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_CITY_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="profile-require_region" type="list"  default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_REGION_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_REGION_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="profile-require_country" type="list"  default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_COUNTRY_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_COUNTRY_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="profile-require_postal_code" type="list"  default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_POSTAL_CODE_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_POSTAL_CODE_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="profile-require_phone" type="list"  default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_PHONE_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_PHONE_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="profile-require_paypal_email" type="list"  default="1"
+            description="Please insert your paypal email here!"
+            label="PayPal email:"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="profile-require_website" type="list"  default="1"
+
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_WEB_SITE_DESC"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_WEB_SITE_LABEL"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+    <field 	name="profile-require_favoritebook"
+    type="list"  default="1"
+
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FAVORITE_BOOK_LABEL"
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FAVORITE_BOOK_DESC">
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field
+            name="profile-require_aboutme"
+    type="list"  default="1"
+
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ABOUT_ME_LABEL"
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ABOUT_ME_DESC">
+            <option	value="2">JOPTION_REQUIRED</option>
+            <option	value="1">JOPTION_OPTIONAL</option>
+            <option	value="0">JDISABLED</option>
+    </field>
+    <field
+            name="profile-require_tos"
+    type="list"  default="1"
+
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_TOS_LABEL"
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_TOS_DESC">
+            <option	value="2">JOPTION_REQUIRED</option>
+            <option	value="1">JOPTION_OPTIONAL</option>
+            <option	value="0">JDISABLED</option>
+    </field>
+    <field
+            name="profile-require_tos_link" type="text"
+            label="Terms of Service Link:"
+    >
+    </field>
+    <field
+            name="profile-require_dob" type="list"  default="1"
+            label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_DOB_LABEL"
+            description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_DOB_DESC"
+     >
+            <option	value="2">JOPTION_REQUIRED</option>
+            <option	value="1">JOPTION_OPTIONAL</option>
+            <option	value="0">JDISABLED</option>
+    </field>
+
+    <field
+          name="profile-require_file"
+          type="list"  default="1"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FILE_DESC"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FILE_LABEL"
+    >
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+
+
+    <!-- <field name="spacer2" type="spacer" hr="true"
+    />
+    <field name="module-require-user" type="spacer" class="text"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_NAME_MODUL_USER_PROFILE"
+    />
+
+    <field name="module-require_address1" type="list"  default="1"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS1_DESC"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS1_LABEL"
+    >
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="module-require_address2" type="list"  default="1"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS2_DESC"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ADDRESS2_LABEL"
+    >
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="module-require_city" type="list"  default="1"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_CITY_DESC"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_CITY_LABEL"
+    >
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="module-require_region" type="list"  default="1"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_REGION_DESC"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_REGION_LABEL"
+    >
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="module-require_country" type="list"  default="1"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_COUNTRY_DESC"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_COUNTRY_LABEL"
+    >
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="module-require_postal_code" type="list"  default="1"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_POSTAL_CODE_DESC"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_POSTAL_CODE_LABEL"
+    >
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="module-require_phone" type="list"  default="1"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_PHONE_DESC"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_PHONE_LABEL"
+    >
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="module-require_paypal_email" type="list"  default="0"
+            description="Please insert your paypal email here!"
+            label="PayPal email:"
+    >
+            <option value="2">JOPTION_REQUIRED</option>
+            <option value="1">JOPTION_OPTIONAL</option>
+            <option value="0">JDISABLED</option>
+    </field>
+
+    <field name="module-require_website" type="list"  default="1"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_WEB_SITE_DESC"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_WEB_SITE_LABEL"
+    >
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+    <field  name="module-require_favoritebook"
+          type="list"  default="1"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FAVORITE_BOOK_LABEL"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FAVORITE_BOOK_DESC">
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+
+    <field
+          name="module-require_aboutme" type="list"  default="1"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ABOUT_ME_LABEL"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_ABOUT_ME_DESC">
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+    <field
+          name="module-require_tos"
+          type="list"  default="1"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_TOS_LABEL"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_TOS_DESC">
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+    <field
+          name="module-require_tos_link"
+          type="text" label="Terms of Service Link:"
+    >
+    </field>
+    <field
+          name="module-require_dob"
+          type="list"  default="1"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_DOB_LABEL"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_DOB_DESC"
+    >
+          <option value="2">JOPTION_REQUIRED</option>
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field>
+
+    <field
+          name="module-require_file"
+          type="list"  default="1"
+          description="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FILE_DESC"
+          label="PLG_USER_SIMPLEMEMBERSHIP_FIELD_FILE_LABEL"
+    >
+          <option value="1">JOPTION_OPTIONAL</option>
+          <option value="0">JDISABLED</option>
+    </field> -->
+    </fieldset>
+    </fields>
+  </config>
+</extension>

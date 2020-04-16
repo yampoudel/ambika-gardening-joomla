@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="Show Users">
+    <message><![CDATA[Displays a users]]></message>
+  </layout>
+   <fields name="params">
+      <fieldset name="params" addfieldpath="/administrator/components/com_simplemembership/elements" label="Params"
+                description="">
+        <field name="show_users_group" type="showuserslayout" default="" class="inputbox" label="Groups to show"
+                extension="com_simplemembership" multiple="true" size="1"
+                description="Choose group of users to show (Default show all)"/>
+        <field name="userslayout" type="viewlayout" default="" class="inputbox" label="Layout" description="Choose a layout"/>
+        <field name="usersOnPage" type="list" default="20" class="inputbox" label="Users per page" description="The maximum number of users displayed per page.">
+            <option value="default">System default</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="all">All</option>
+        </field>
+      </fieldset>
+  </fields>
+</metadata>

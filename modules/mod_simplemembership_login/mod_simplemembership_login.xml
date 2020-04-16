@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<extension type="module" version="3.0" client="site" method="upgrade">
+  <name>Simple Membership - Login Free</name>
+    <authorUrl>http://www.ordasoft.com</authorUrl>
+    <creationDate>January 2020</creationDate>
+    <author>Andrey Kvasnevskiy, Vladislav Prikhodko</author>
+    <authorEmail>support@ordasoft.com</authorEmail>
+    <copyright> @copyright Andrey Kvasnevskiy-OrdaSoft(akbet@mail.ru); All rights reserved. </copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <version>6.5.9 FREE</version>
+    <description>Simple Membership - Login module for simplemembership component.</description>
+    <files>
+        <filename module="mod_simplemembership_login">mod_simplemembership_login.php</filename>
+        <filename module="index">index.html</filename>
+         <folder>tmpl</folder>
+    </files>
+    <languages >
+        <language tag="en-GB">en-GB/en-GB.mod_simplemembership_login.ini</language>
+    </languages>            
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix"
+                        description="A suffix to be applied to the css class of the module; this allows individual module styling." />
+                <field name="pretext" type="textarea" cols="30" rows="5" default="" label="Pre-text"
+                        description="This is the text or HTML that is displayed above the Login form." />
+                <field name="posttext" type="textarea" cols="30" rows="5" label="Post-text"
+                        description="This is the text or HTML that is displayed below the Login form." />
+                <field name="show_joomla_login" type="radio" label="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_SHOW_JOOMLA_LOGIN"
+                            description="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_SHOW_JOOMLA_LOGIN_DESC" default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_gmail_login" type="radio" label="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_SHOW_GMAIL_LOGIN"
+                            description="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_SHOW_GMAIL_LOGIN_DESC" default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="gmail_api_key" type="text" default="" label="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_GMAIL_API_KEY"
+                        description="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_GMAIL_API_KEY_DESC" />
+                <field name="gmail_client_id" type="text" default="" label="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_GMAIL_CLIENT_ID"
+                        description="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_GMAIL_CLIENT_ID_DESC" />
+                <field name="gmail_btn_text" type="text" default="Gmail Login" label="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_GMAIL_BUTTON_TEXT"
+                        description="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_GMAIL_BUTTON_TEXT_DESC" />
+                <field name="login" type="menuitem" disable="separator" label="Login Redirection"
+                        description="The page where user is redirected to after login." >
+                    <option value="">JDEFAULT</option>
+                </field>
+                
+                <field name="logout" type="menuitem" disable="separator" label="MOD_SMS_LOGIN_LOGOUT_REDIRECTION"
+                        description="MOD_SMS_LOGIN_LOGOUT_REDIRECTION_HINT" >
+                    <option value="">JDEFAULT</option>
+                </field>                   
+                <field name="greeting" type="radio" default="1" label="Greeting"
+                        description="Show/Hide the simple greeting text.">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                </field>
+                <field name="name" type="list" default="0" label="Name/Username"
+                        description="Show the username or name in the greeting.">
+                        <option value="0">Username</option>
+                        <option value="1">Name</option>
+                </field>
+                <field name="accountlink" type="radio" default="1"
+                        label="Account Maintenance Link"
+                        description="Show/Hide the Account Maintenance link.">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                </field>
+                <field name="show_captcha" type="radio" label="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_SHOW_CAPTCHA"
+                            description="MOD_SMS_LOGIN_SIMPLEMEMBERSHIP_SHOW_CAPTCHA_DESC" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+              </fieldset>
+        </fields>
+    </config>
+</extension>

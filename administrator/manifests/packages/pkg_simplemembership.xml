@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0" method="upgrade">
+<name>Simple Membership Package</name>
+<author>Andrey Kvasnevskiy, Vladislav Prikhodko</author>
+<creationDate>March 2020</creationDate>
+<copyright> @copyright Andrey Kvasnevskiy-OrdaSoft(akbet@mail.ru); All rights reserved. </copyright>
+<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+<packagename>simplemembership</packagename>
+<version>6.6.5 FREE</version>
+<url>http://www.ordasoft.com</url>
+<description>Simple Membership Package</description>
+<files folder="pkg">
+  <folder type="component" id="com_simplemembership" >com_simplemembership_FREE</folder>
+  <folder type="module" id="mod_simplemembership_login" client="site">mod_login_free</folder>
+  <folder type="module" id="mod_simplemembership_user_online" client="site">mod_user_online_free</folder>
+  <folder type="module" id="mod_simplemembership_user_profile" client="site">mod_user_profile_free</folder>
+  <folder type="plugin" id="plg_simplemembership_authentication" group="authentication">plg_authentication</folder>
+  <folder type="plugin" id="plg_simplemembership_get_books" group="simplemembership">plg_get_books</folder>
+  <folder type="plugin" id="plg_simplemembership_get_houses" group="simplemembership">plg_get_houses</folder>
+  <folder type="plugin" id="plg_simplemembership_get_media" group="simplemembership">plg_get_media</folder>
+  <folder type="plugin" id="plg_simplemembership_get_vehicles" group="simplemembership">plg_get_vehicles</folder>
+  <folder type="plugin" id="plg_simplemembership_get_ads" group="simplemembership">plg_get_ads</folder>
+  <folder type="plugin" id="plg_simplemembership_user_profile" group="user">plg_user_profile</folder>
+  <folder type="plugin" id="plg_simplemembership_get_cck_user_instances" group="simplemembership">plg_simplemembership_get_cck_user_instances</folder>
+  <folder type="plugin" id="plg_simplemembership_get_cck_user_instances2" group="simplemembership">plg_simplemembership_get_cck_user_instances2</folder>
+  <folder type="plugin" id="plg_simplemembership_get_cck_user_instances3" group="simplemembership">plg_simplemembership_get_cck_user_instances3</folder>
+  <folder type="plugin" id="plg_simplemembership_get_cck_user_instances4" group="simplemembership">plg_simplemembership_get_cck_user_instances4</folder>
+  <folder type="plugin" id="plg_simplemembership_get_cck_user_instances5" group="simplemembership">plg_simplemembership_get_cck_user_instances5</folder>
+  <folder type="plugin" id="plg_simplemembership_get_cck_user_instances6" group="simplemembership">plg_simplemembership_get_cck_user_instances6</folder>
+  <folder type="plugin" id="plg_simplemembership_get_cck_user_instances7" group="simplemembership">plg_simplemembership_get_cck_user_instances7</folder>
+  <folder type="plugin" id="plg_simplemembership_get_cck_user_instances8" group="simplemembership">plg_simplemembership_get_cck_user_instances8</folder>
+  <folder type="plugin" id="plg_simplemembership_get_cck_user_instances9" group="simplemembership">plg_simplemembership_get_cck_user_instances9</folder>
+  <folder type="plugin" id="plg_simplemembership_get_cck_user_instances10" group="simplemembership">plg_simplemembership_get_cck_user_instances10</folder>
+  <folder type="plugin" id="plg_simplemembership_user_messages" group="simplemembership">plg_simplemembership_user_messages</folder>
+</files>
+<updateservers>
+  <server type="extension" priority="1" name="Simplemembership`s FREE Update">http://ordasoft.com/xml_update/pkg_simplemembership_free_update.xml</server>
+</updateservers>
+</extension>

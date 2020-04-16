@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="simplemembership" method="upgrade">
+  <name>Simple membership and CCK, get user instances5</name>
+    <author>OrdaSoft </author>
+    <creationDate>2020</creationDate>
+    <copyright>(C) 2020 OrdaSoft</copyright>
+    <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+    <authorEmail>akbet@mail.ru</authorEmail>
+    <authorUrl>www.ordasoft.com</authorUrl>
+    <version>6.5.0 FREE</version>
+    <description>Simple membership and CCK, get instance plugin show user instances in user profile Simple membership component</description>
+    <files>
+      <filename plugin="plg_simplemembership_get_cck_user_instances5">plg_simplemembership_get_cck_user_instances5.php</filename>
+      <filename>plg_simplemembership_get_cck_user_instances5.xml</filename>
+      <filename>buttons.css</filename>
+      <filename>index.html</filename>
+      <filename>elements/index.html</filename>
+      <filename>elements/userinstanceslayout.php</filename>
+
+    </files>
+    <config>
+    <fields name="params" >
+        <fieldset name="basic"  addfieldpath="/plugins/simplemembership/plg_simplemembership_get_cck_user_instances5/elements">
+            <field name="user_instances_layout" type="userinstanceslayout" default="" class="inputbox" label="User Instances Layout"
+                   extension="com_os_cck" multiple="false" size="1" required="true"
+                   description="Choose layout for show user's instance"/>
+            
+            
+            
+            <field name="back_button" type="list" default="" label="Back Button"
+                description="Show/Hide a Back Button, that returns you to the previously view page">
+                    <option value="">Use Global</option>
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+            </field>
+            <field name="tab_name" type="text"
+                description="Tab name"
+                label="Tab name in simple membership user profile"
+                default="SMS User Instances 5"
+                size="37"
+            />   
+        </fieldset>
+      
+        <fieldset name="instance_manager_acces" label="Button Access">
+            <field name="instance_manager_access" type="usergrouplist" default="8" class="inputbox" label="Instance manager acces"
+                extension="com_os_cck" multiple="true" description=""/>
+            <field name="im_add_instance_access" type="usergrouplist" default="8" class="inputbox" label="Show Add instance"
+                extension="com_os_cck" multiple="true" description=""/>
+            <field name="im_rent_requests_access" type="usergrouplist" default="8" class="inputbox" label="Show Rent request"
+                extension="com_os_cck" multiple="true" description=""/>
+            <field name="im_buy_requests_access" type="usergrouplist" default="8" class="inputbox" label="Show Buy request"
+                extension="com_os_cck" multiple="true" description=""/>
+            <field name="im_approve_access" type="usergrouplist" default="8" class="inputbox" label="Show approve instances"
+                extension="com_os_cck" multiple="true" description=""/>
+            <field name="rent_manager_access" type="usergrouplist" default="8" class="inputbox" label="Rent Manager"
+                extension="com_os_cck" multiple="true" description=""/>
+
+        </fieldset>
+        
+    </fields>
+    </config>
+</extension>
+

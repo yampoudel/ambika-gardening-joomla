@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="simplemembership" method="upgrade">
+
+  <name>Simple membership user messages</name>
+    <author>OrdaSoft Vladislav Prikhodko</author>
+    <creationDate>January 2020</creationDate>
+    <copyright>(C) 2020 OrdaSoft</copyright>
+    <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+    <authorEmail>akbet@mail.ru</authorEmail>
+    <authorUrl>www.ordasoft.com</authorUrl>
+    <version>6.5.0 FREE</version>
+    <description>Simple membership user messaging plugin</description>
+    <files>
+      <filename plugin="plg_simplemembership_user_messages">plg_simplemembership_user_messages.php</filename>
+      <filename>plg_simplemembership_user_messages.xml</filename>
+      <filename>messages.php</filename>
+      <filename>messages.html.php</filename>
+      <filename>buttons.css</filename>
+      <filename>index.html</filename>
+    </files>
+    <languages>
+      <language tag="en-GB">en-GB.plg_simplemembership_plg_simplemembership_user_messages.ini</language>
+      <language tag="en-GB">en-GB.plg_simplemembership_plg_simplemembership_user_messages.sys.ini</language>
+      
+    </languages>
+    <config>
+      <fields name="params">
+        <fieldset name="basic">
+            <field name="show_captcha" type="radio" label="PLG_MESSAGES_SIMPLEMEMBERSHIP_SHOW_CAPTCHA"
+                            description="PLG_MESSAGES_SIMPLEMEMBERSHIP_SHOW_CAPTCHA_DESC" default="0">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="captcha_acces" type="list" multiple="true" label="PLG_MESSAGES_SIMPLEMEMBERSHIP_CAPTCHA_ACCESS"
+                            description="PLG_MESSAGES_SIMPLEMEMBERSHIP_CAPTCHA_ACCESS_DESC" default="1">
+                <option value="1">.-Public</option>
+                <option value="9">.--Guest</option>
+                <option value="6">.--Manager</option>
+                <option value="7">.---Administrator</option>
+                <option value="2">.--Registered</option>
+                <option value="3">.---Author</option>
+                <option value="4">.----Editor</option>
+                <option value="5">.-----Publisher</option>
+                <option value="8">.--Super Users</option>
+            </field>
+            <field name="email_to_user" type="radio" label="PLG_MESSAGES_SIMPLEMEMBERSHIP_EMAIL_TO_USER"
+                            description="PLG_MESSAGES_SIMPLEMEMBERSHIP_EMAIL_TO_USER_DESC" default="0">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="send_text_message" type="radio" label="PLG_MESSAGES_SIMPLEMEMBERSHIP_SEND_TEXT_MESSAGE_IN_EMAIL"
+                            description="PLG_MESSAGES_SIMPLEMEMBERSHIP_SEND_TEXT_MESSAGE_IN_EMAIL_DESC" default="0">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+          <field name="tab_name" type="text"
+                 description="Tab name"
+                 label="Tab name in simple membership user profile"
+                 default="SMS messages"
+                 size="37"
+                 />
+          </fieldset>
+        </fields>
+      </config>
+</extension>
